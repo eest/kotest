@@ -13,6 +13,9 @@ on:
       - "v*.*.*"
 
 jobs:
+  test:
+    steps:
+      - run: env
   container:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: Build and push container
