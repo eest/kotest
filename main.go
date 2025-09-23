@@ -12,4 +12,5 @@ func main() {
 	fmt.Println("kotest:", version)
 	fmt.Println("kotest2:", version)
 	log.Info().Msg("hello world")
+	log.Info().Msg("hello world2")
 }
