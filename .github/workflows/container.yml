@@ -41,4 +41,4 @@ jobs:
       - run: ko build --bare --tags "$(printf '%s' "${{ steps.meta.outputs.tags }}" | tr '\n' ',')"
         name: Build and push
         env:
-          VERSION: ${{ github.ref_name }}
+          VERSION: ${{ github.event_name == 'release' && ${{ github.ref_name }} || ${{ github.sha }} }}
